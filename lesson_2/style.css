@@ -1,0 +1,23 @@
+body {
+    max-width: 659px;
+    margin: 0 auto; 
+    font-family: sans-serif;
+}
+.title {
+    margin-top: 80px;
+}
+h1 {
+    font-family: serif;
+    margin-bottom: 0;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+.shuttles_title {
+    margin-bottom: 0;
+}
+.shuttles-count {
+    margin: 0;
+}
+ul {
+    margin: 0;
+}
