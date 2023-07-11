@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: linear-gradient(180deg, #F6FAFD 0%, #FFF 100%);
+    color: var(--1, #4B5D68);
+}
+.header{
+    max-width: 1600px;
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+    margin-top: 50px;
+}
+.header_nav_ul{
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    margin-left: 120px;
+    margin-right: 420px;
+
+}
+.header_nav_link{
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 160%;
+}
+.header_nav_link:hover{
+    font-weight: 800;
+    color: var(--2, #212353)
+}
+
+.header_btn{
+    display: flex;
+    padding: 17px 49px 17px 29px;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+    border: none;
+    gap: 20px;
+
+}
+.header_btn:hover{
+    cursor: pointer;
+}
+.main{
+    margin-top: 130px;
+    margin-bottom: 200px;
+    position: relative;
+    display: flex;
+}
+.main_content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 645px;
+}
+.main_title{
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 110%;
+    color: var(--2, #212353)
+}
+.main_text{
+    width: 380px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+}
+.main_btn{
+    align-self: start;
+    padding: 16px 37px;
+    border-radius: 50px;
+    background: var(--3, #9C69E2);
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 800;
+}
+.main_img{
+    position: absolute;
+    left: 363px;
+    top: 96px;
+}
+.explain{
+    width: 1117px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50px;
+    background: rgba(240, 99, 184, 0.15);
+
+}
+.explain_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    max-width: 475px;;
+}
+.explain_title{
+    color: #212353;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 130%;
+}
+.explain_text{
+    color: var(--1, #4B5D68);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+}
