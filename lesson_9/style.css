@@ -294,6 +294,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 5.6rem;
 }
+.features-item-text {
+    list-style-position: inside;
+}
 .reviews {
     position: relative;
 }
@@ -311,7 +314,7 @@ body {
     width: 21%;
     border: 1px solid #828282;
     border-radius: 4px;
-}
+} 
 .review-item-wrap {
     padding: 15px 13px 24px 17px;
 }
