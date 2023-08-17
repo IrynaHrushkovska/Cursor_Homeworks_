@@ -1,0 +1,691 @@
+$bgBtn: #111B47;
+$bg:#E7ECFF;
+$textColor: #6F7CB2;
+$titleColor: #091133;
+$logoColor: #37447E;
+$otherText: #5D6970;
+$btnColor: #fff;
+$weightText: 400;
+$weightTitle: 500; 
+@font-face {
+    font-family: 'Roboto', sans-serif;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin BtnPurchase {
+    text-decoration: none;
+    text-align: center;
+    background-color: $bgBtn;
+    color: $btnColor;
+    font-weight: 500;
+    border: 2px solid $titleColor;
+    border-radius: 2px;
+    padding: 5px 9%;
+    margin-right: 3rem;
+}
+@mixin btnDarkHover {
+    cursor: pointer;
+    background-color: transparent;
+    color: $titleColor;
+    transition: 0.5s;
+}
+@mixin content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .content-title {
+        font-size: 2.25rem;
+        font-weight: 500;
+        line-height: 133%;
+        color: $titleColor;
+    }
+}
+body {
+    font-family: Roboto;
+    font-weight: $weightText;
+    color: $textColor;
+    font-size: 1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    width: 85vw;
+    margin: 0 auto;
+}
+.hero-wrap {
+    position: relative;
+    padding-top: 2vh;
+    background-image: url('images/hero_img_bg.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+}
+.header {
+    @include flexBetween();
+    .header-nav-list {
+        @include flexBetween();
+        text-decoration: none;
+        list-style: none;
+        color: $textColor;
+        gap: 42%;
+        font-size: 0.875rem;
+    }
+    .logo_text {
+        font-size: 1.625rem;
+        font-weight: 900;
+        line-height: 145%;
+        color: $logoColor;
+    }
+    .buy-now_btn {
+        width: 13%;
+        font-size: 0.75rem;
+        background-color: $bgBtn;
+        color: $btnColor;
+        border-radius: 2px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .buy-now_btn:hover {
+        @include btnDarkHover()
+    }
+}
+.section-hero {
+    margin-top: 25%;
+    padding-bottom: 26.5%;
+    .section-hero_wrap {
+        display: flex;
+    }
+    .section-hero_content{
+        width: 41vw;
+    }
+    .hero-title {
+        font-size: 3.125rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: $titleColor;
+        margin-bottom: 3.5%;
+    }
+    .hero-text {
+        width: 90%;
+        font-size: 1.125rem;
+        line-height: 30px;
+    }
+    .hero-text-indent {
+        margin-bottom: 2%;
+    }
+    .btn-links {
+        margin-top: 10%;
+        display: flex;
+        .purchase {
+            @include BtnPurchase ();
+        }
+        .learn-more {
+            text-decoration: none;
+            background-color: transparent;
+            text-align: center;
+            color: $titleColor;
+            font-weight: 500;
+            border: 2px solid $titleColor;
+            border-radius: 2px;
+            padding: 5px 11.5%;
+        }
+        .purchase:hover {
+            @include btnDarkHover();
+        }
+        .learn-more:hover {
+            cursor: pointer;
+            background-color: $bgBtn;
+            color: $btnColor;
+            transition: 0.5s;
+        }
+    }
+    .section-hero-img {
+        position: absolute;
+        right: 0;
+        top: 28%;	
+        width: 45%;
+        object-fit: cover;
+    }
+    .hero_img {
+        width: 100%;
+        height: auto;
+    }
+}
+.about-wrap {
+    @include flexBetween ();
+    padding-top: 10%;
+    .content-wrap {
+        @include content ();
+        padding-top: 10%;
+        width: 42%;
+    }
+    .about-elements {
+        @include flexBetween ();
+        gap: 1.875rem;
+        margin-top: 5%;
+        .about-elements-item-img {
+            margin-bottom: 0.875rem;
+        }
+        .about-elements-item-title {
+            color: $titleColor;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .about-elements-item-text {
+            color: $otherText;
+            font-size: 0.75rem;
+        }
+    }
+    .about-section-img {
+        width: 45%;
+    }
+}
+.about-details {
+    max-width: 100%;
+    margin-top: 10%;
+    padding-bottom: 14%;
+    display: flex;
+    flex-direction: column;
+    gap: 14.5rem;
+    .about-details-item {
+        @include flexBetween();
+    }
+    .content-wrap {
+        @include content();
+        width: 34%;
+        .about-details-btn {
+            @include BtnPurchase();
+            font-size: 0.875rem;
+            padding: 4px 6%;
+            width: 35%;
+            margin-top: 10%;
+        }
+        .about-details-btn:hover {
+            @include btnDarkHover();
+        }
+    }
+}
+.img-wrap {
+    width: 66%;
+}
+.price {
+    background-image: url(images/price_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 11%;
+    .price-title {
+        color: $titleColor;
+        font-size: 2.25rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .price-text {
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 2.18rem;
+    }
+    .price-value {
+        font-size: 3.125rem;
+        font-weight: 500;
+        letter-spacing: 1px;;
+        color: #222F65;
+    }
+    .price-value-sign {
+        color: $logoColor;
+        margin-bottom: 3.75rem;
+    }
+    .price-pre-button-text {
+        color: $otherText;
+        font-size: 0.875rem;
+        margin-bottom: 9px;
+    }
+    .price-purchase {
+        @include BtnPurchase();
+        font-weight: 500;
+        margin: 0 auto;
+        padding: 4px 0;
+        width: 15%;
+    }
+    .price-purchase:hover {
+        @include btnDarkHover();
+    }
+}
+.footer {
+    background-color: #E7ECFF;
+    .footer-info {
+        @include flexBetween();
+        padding-top: 4.5%;
+        padding-bottom: 3%;
+        border-bottom: 1px solid #CDD1D4;
+        .copyright {
+            color: #939EA4;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .logo_text {
+            font-size: 1.625rem;
+            font-weight: 900;
+            color: $logoColor;
+        }
+        .logo_text:hover {
+            cursor: pointer;
+        }
+        .price-purchase {
+            @include BtnPurchase();
+            padding: 4px 0;
+            width: 9%;
+        }
+        .price-purchase:hover {
+            @include btnDarkHover();
+        }
+    }
+}
+.footer-links {
+    @include flexBetween();
+    padding-top: 20px;
+    padding-bottom: 32px;
+    .nav-list {
+        @include flexBetween();
+        gap: 60px;
+        list-style: none;
+    }
+    .nav-link {
+        text-decoration: none;
+        color: #929ECC;
+        font-size: 0.875rem;
+    }
+}
+.footer-social {
+    @include flexBetween();
+    gap: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    :root {
+        font-size: 14px;
+    }
+    .section-hero  {
+        margin-top: 15%;
+        padding-bottom: 5%;
+        .section-hero_content{
+            .hero-text {
+                 line-height: normal;
+             }
+         }
+    }
+    .about-wrap {
+        padding-top: 1%;
+    }
+    .about-details {
+        gap: 5rem;
+        padding-bottom: 5%;
+        .img-wrap {
+            width: 50%;
+        }
+    }
+    .price {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        .price-title {
+            margin-bottom: 1rem;
+        }
+        .price-text {
+            margin-bottom: 1.5rem;
+        }
+        .price-value-sign {
+            margin-bottom: 2rem;
+        }
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    :root {
+        font-size: 12px;
+    }
+    @mixin flexBetween480px {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @mixin BtnPurchase480px {
+        text-decoration: none;
+        text-align: center;
+        background-color: $bgBtn;
+        color: $btnColor;
+        font-weight: 500;
+        border: 2px solid $titleColor;
+        border-radius: 2px;
+        padding: 5px 2%;
+        margin-right: 3rem;
+    }
+    @mixin content480px {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+            .content-title {
+                font-size: 2rem;
+                font-weight: 500;
+                color: $titleColor;
+            }
+    }
+    .header {
+        .header-nav-list {
+            gap: 20%;
+        }
+    }
+    .section-hero {
+        margin-top: 15%;
+        padding-bottom: 15%;
+        .section-hero_wrap {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .section-hero_content{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+        }
+        .hero-text {
+            font-size: 1rem;
+            line-height: normal;
+        }
+        .btn-links {
+            width: 100%;
+            justify-content: center;
+            .purchase {
+                @include BtnPurchase480px ();
+            }
+            .learn-more {
+                padding: 5px 5%;
+            }
+        }
+        .section-hero-img {
+            position: relative;
+        }
+        .hero_img {
+            width: 80%;
+            height: auto;
+        }
+    }
+    .about-wrap {
+        @include flexBetween480px ();
+        padding-top: 5%;
+        .content-wrap {
+            @include content480px ();
+            width: 90%;
+        }
+        .about-section-img {
+            display: none;
+        }
+    }
+    .about-details {
+        padding-bottom: 5%;
+        gap: 4rem;
+        .about-details-item {
+            @include flexBetween480px();
+        }
+        .content-wrap {
+            @include content480px();
+            padding-top: 2rem;
+            width: 90%;
+            .about-details-btn {
+                margin-right: 0;
+            }
+        }
+    }
+    .img-wrap {
+        width: 50%;
+    }
+    .price {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        .price-title {
+            font-size: 1.5rem;
+        }
+        .price-text {
+            width: 90%;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        .price-value {
+            font-size: 2.5rem;
+        }
+        .price-value-sign {
+            margin-bottom: 1rem;
+        }
+        .price-purchase {
+            width: 30%;
+        }
+    }
+    .footer {
+        .footer-info {
+            .copyright {
+                color: #939EA4;
+                font-size: 0.70rem;
+            }
+            .price-purchase {
+                @include BtnPurchase();
+                margin-right: 0;
+                padding: 4px 0;
+                width: 20%;
+                font-size: 0.875rem;
+            }
+        }
+    }
+    .footer-links {
+        @include flexBetween();
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .nav-list {
+            gap: 10px;
+            .soial-item {
+                width: 13px;
+                height: 13px;
+            }
+        }
+    }
+    .footer-social {
+        gap: 10px;
+    }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+    :root {
+        font-size: 12px;
+    }
+    @mixin flexBetween480px {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @mixin BtnPurchase480px {
+        text-decoration: none;
+        text-align: center;
+        background-color: $bgBtn;
+        color: $btnColor;
+        font-weight: 500;
+        border: 2px solid $titleColor;
+        border-radius: 2px;
+        padding: 5px 2%;
+        margin-right: 3rem;
+    }
+    @mixin content320px {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+            .content-title {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $titleColor;
+            }
+    }
+    .container {
+        width: 90vw;
+    }
+    .header {
+        .header-nav-list {
+            gap: 5%;
+            font-size: 0.8rem;
+        }
+        .logo_text {
+            font-size: 1rem;
+        }
+        .buy-now_btn {
+            width: 20%; 
+        }
+    }
+    .section-hero {
+        margin-top: 5%;
+        padding-bottom: 15%;
+        .section-hero_wrap {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .section-hero_content{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        .hero-text {
+            font-size: 1rem;
+            line-height: normal;
+        }
+        .btn-links {
+            width: 100%;
+            justify-content: center;
+            .purchase {
+                @include BtnPurchase480px ();
+            }
+            .learn-more {
+                padding: 5px 5%;
+            }
+        }
+        .section-hero-img {
+            display: none;
+        }
+        .hero_img {
+            width: 80%;
+            height: auto;
+        }
+    }
+    .about-wrap {
+        @include flexBetween480px ();
+        padding-top: 5%;
+        .content-wrap {
+            @include content320px ();
+            width: 90%;
+        }
+        .about-section-img {
+            display: none;
+        }
+    }
+    .about-details {
+        padding-bottom: 5%;
+        gap: 2.5rem;
+        .about-details-item {
+            @include flexBetween480px();
+        }
+        .content-wrap {
+            @include content320px();
+            padding-top: 2rem;
+            width: 90%;
+            .about-details-btn {
+                margin-right: 0;
+            }
+        }
+    }
+    .img-wrap {
+        width: 50%;
+    }
+    .price {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        .price-title {
+            font-size: 1.5rem;
+        }
+        .price-text {
+            width: 90%;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        .price-value {
+            font-size: 1.5rem;
+        }
+        .price-value-sign {
+            margin-bottom: 1rem;
+        }
+        .price-purchase {
+            width: 30%;
+            font-size: 0.8rem;
+        }
+    }
+    .footer {
+        .footer-info {
+            .copyright {
+                color: #939EA4;
+                font-size: 0.50rem;
+            }
+            .logo_text {
+                font-size: 1.2rem;
+            }
+            .price-purchase {
+                @include BtnPurchase();
+                margin-right: 0;
+                padding: 4px 0;
+                width: 25%;
+                font-size: 0.7rem;
+            }
+        }
+    }
+    .footer-links {
+        @include flexBetween();
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .nav-list {
+            gap: 5px;
+        }
+        .nav-link {
+            font-size: 0.7rem;
+        }
+    }
+    .footer-social {
+        gap: 5px;
+        .soial-item {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
